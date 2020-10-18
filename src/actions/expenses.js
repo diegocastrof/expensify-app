@@ -1,23 +1,29 @@
-import { nanoid } from 'nanoid'
+import db from '../firebase/firebase';
 
 // ------------ Expenses Actions --------------- 
 // * ADD_EXPENSE
-export const addExpense = ({
-  description = '',
-  note = '',
-  amount = 0,
-  createdAt = 0
-} = {}
-) => ({
+export const addExpense = (expense) => ({
   type: 'ADD_EXPENSE',
-  expense: {
-    id: nanoid(10),
-    description,
-    note,
-    amount,
-    createdAt
-  }
+  expense
 })
+
+export const startAddExpense = (expenseData = {}) => {
+  return (dispatch) => {
+    const {
+      description = '',
+      note = '',
+      amount = 0,
+      createdAt = 0
+    } = expenseData
+    const expense = { description, note, amount, createdAt }
+    db.ref('expenses').push(expense)
+      .then((ref) => {
+        dispatch(addExpense({
+          id: ref.key,
+          ...expense
+        }))
+      })
+}}
 // * EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
