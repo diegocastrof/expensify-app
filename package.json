@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "firebase": "^7.24.0",
+    "history": "4.7.2",
     "jest": "^26.5.2",
     "live-server": "^1.2.1",
     "moment": "^2.29.1",
