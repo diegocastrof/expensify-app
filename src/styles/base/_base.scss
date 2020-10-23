@@ -1,25 +1,35 @@
 // Turns font size REM equals to 10px
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
+	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
+}
+.container {
+	max-width: 114rem;
+	margin: 0 auto;
 }
 
 button {
-  cursor: pointer;
-  &:disabled {
-    cursor: default;
-  }
+	cursor: pointer;
+	&:disabled {
+		cursor: default;
+	}
 }
 
-@media(max-width: 400px) {
-  html {
-    font-size: 50%;
-  } 
+@media (max-width: 400px) {
+	html {
+		font-size: 50%;
+	}
 }
 
 .navlink-active {
-  color: red;
+	// color: red;
+}
+
+* {
+	margin: 0;
+	padding: 0;
 }

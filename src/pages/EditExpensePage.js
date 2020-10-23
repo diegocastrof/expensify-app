@@ -6,7 +6,26 @@ import { startEditExpense, startRemoveExpense } from '../actions/expenses'
 
 const EditExpensePage = (props) => (
   <div>
-    <h1>This is Edit for {props.expense.description}</h1>
+    <div className="page-header">
+      <div className="container">
+        <div className="edit-header">
+          <p className="edited-expense">
+            Editing expense { props.expense.description }
+          </p>
+          <div className="delete-btn">
+            <button 
+              className="btn btn-red btn-md"
+              onClick= {() => { 
+                props.dispatch(startRemoveExpense(props.expense.id))
+                props.history.push('/')
+              }}
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <ExpenseForm 
       expense={props.expense}
       onSubmit={ (expense) => { 
@@ -14,15 +33,6 @@ const EditExpensePage = (props) => (
         props.history.push('/')
       }} 
     />
-    <button 
-      onClick= {() => { 
-        console.log('click')
-        props.dispatch(startRemoveExpense(props.expense.id))
-        props.history.push('/')
-      }}
-    >
-      Remove
-    </button>
   </div>
 )
 

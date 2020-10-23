@@ -1,0 +1,47 @@
+.expenses-list {
+	width: 70%;
+	margin: 0 auto;
+	border: 1px solid $light-grey;
+	border-radius: 3px;
+	color: $dark-grey;
+	margin-bottom: 5rem;
+
+	&__header {
+		font-size: 2rem;
+		padding: 2rem 4rem;
+		font-weight: 300;
+		color: $dark-grey;
+		background-color: $light-grey;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: flex;
+		padding: 2rem 4rem;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $light-grey;
+		}
+		.expense-description a {
+			font-size: 2rem;
+			color: $dark-blue;
+			text-decoration: none;
+			margin-bottom: 1rem;
+		}
+		.expense-date {
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+		&--price {
+			font-size: 2rem;
+			font-style: italic;
+		}
+		&--empty {
+			text-align: center;
+			font-size: 2rem;
+			padding: 2rem;
+		}
+	}
+}

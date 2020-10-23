@@ -1,0 +1,32 @@
+.header {
+	background-color: $dark-blue;
+}
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	max-width: 114rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.header__brand {
+	padding: 2rem 0;
+	&--link {
+		color: white;
+		text-decoration: none;
+		font-size: 3rem;
+		font-weight: 700;
+	}
+}
+
+.header__links {
+	display: flex;
+	align-items: center;
+}
+.header__links--logout {
+	background-color: transparent;
+	color: white;
+	font-size: 2rem;
+	border: none;
+	outline: none;
+}

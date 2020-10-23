@@ -3,9 +3,7 @@ import React from 'react';
 import ExpenseList from '../components/ExpenseList'
 
 const DashboardPage = () => (
-  <div>
-    <ExpenseList />
-  </div>
+  <ExpenseList />
 )
 
 export default DashboardPage

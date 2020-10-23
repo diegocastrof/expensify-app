@@ -4,9 +4,24 @@ import { startLogin } from '../actions/auth';
 
 const LoginPage = ({ startLogin }) => {
   return (
-    <div>
-      <h1>This is the Login Page</h1>
-      <button onClick={ startLogin }>Login</button>
+    <div className="login">
+      <div className="login-bg">
+        <img className="login-bg__img" src="./imgs/bg.jpg" alt="Login Page Background Image"/>
+      </div>
+      <div className="text-container">
+        <h1 className="text-container__title">Expensify</h1>
+        <p className="text-container__subtitle">It's time to put your spending under control</p>
+        <button 
+          className="btn btn-blue btn-lg"
+          onClick={ startLogin }
+        >
+          Login with 
+          <span className="google-icon">
+            <img src="./imgs/google-icon.png" alt=""/>
+          </span>
+        </button>
+      </div>
+      
     </div>
   )
 }

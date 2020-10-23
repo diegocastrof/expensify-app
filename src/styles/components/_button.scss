@@ -1,0 +1,41 @@
+.btn {
+	display: inline-block;
+	padding: 1rem 1rem;
+	border-radius: 2px;
+	color: white;
+	border: none;
+	box-shadow: 3rem 1rem 0.5rem #0000;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+
+	&:hover {
+		transform: translateY(-0.4rem) scale(1.05);
+		box-shadow: 6rem 2rem 1rem #0000;
+	}
+}
+
+.btn-blue {
+	background-color: $light-blue;
+}
+.btn-red {
+	background-color: $alert-red;
+}
+
+.btn-lg {
+	font-size: 2.5rem;
+}
+.btn-md {
+	font-size: 2rem;
+}
+.btn-center {
+	display: block;
+	margin: 0 auto;
+}
+
+.google-icon {
+	width: 4rem;
+	display: inline-block;
+	img {
+		width: 100%;
+	}
+}

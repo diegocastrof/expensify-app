@@ -1,0 +1,52 @@
+.login {
+	position: relative;
+	height: 100vh;
+}
+
+.login-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: rgb(255, 255, 255);
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 0%,
+		rgb(20, 20, 61) 100%
+	);
+	z-index: 99;
+
+	&__img {
+		display: block;
+		width: 100%;
+		object-fit: cover;
+		opacity: 80%;
+	}
+}
+
+.text-container {
+	position: absolute;
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+
+	&__title {
+		color: white;
+		font-size: 7rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+		letter-spacing: 0.2rem;
+	}
+	&__subtitle {
+		color: white;
+		font-size: 3rem;
+		font-weight: 400;
+		font-style: italic;
+		margin-bottom: 5rem;
+	}
+}

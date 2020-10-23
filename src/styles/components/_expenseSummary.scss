@@ -1,0 +1,11 @@
+.summary__content {
+	margin-bottom: 2rem;
+	color: $dark-blue;
+	font-size: 2.5rem;
+	&--title {
+		font-weight: 300;
+		span {
+			font-weight: 700;
+		}
+	}
+}

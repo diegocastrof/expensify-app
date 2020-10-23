@@ -1,0 +1,14 @@
+.input-group {
+	display: flex;
+	margin: 3rem 0;
+	justify-content: center;
+	@media (max-width: $desktop-breakpoint) {
+		flex-direction: column;
+	}
+	&--item {
+		margin-right: 2rem;
+		@media (max-width: $desktop-breakpoint) {
+			margin: 0 0 1rem 0;
+		}
+	}
+}
